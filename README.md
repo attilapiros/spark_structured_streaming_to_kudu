@@ -2,7 +2,7 @@
 
 Example app where Kudu a table is written by a *ForeachWriter*.
 
-*Beware*: errors are not handled yet. It is just a rapid prototype app. 
+*Beware*: errors are not handled yet, this is just a rapid prototype app. 
 
 ## Prerequisite
 
