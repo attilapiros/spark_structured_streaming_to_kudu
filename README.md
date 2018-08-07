@@ -1,6 +1,6 @@
-# Example Spark Streaming app writing into Kudu table
+# Example Spark Structured Streaming app writing into Kudu table
 
-Example app where a Kudu table is written by a *ForeachWriter*.
+Example Spark Structured Streaming app where a Kudu table is written by a *ForeachWriter*.
 
 *Beware*: errors are not handled yet, this is just a rapid prototype app. 
 
