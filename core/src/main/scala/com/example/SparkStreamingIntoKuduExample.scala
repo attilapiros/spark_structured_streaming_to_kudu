@@ -85,8 +85,6 @@ object SparkStreamingIntoKuduExample {
       .builder
       .appName("SparkStreamingIntoKuduExample")
       .master(master)
-      .config("spark.network.timeout", "3700s")
-      .config("spark.executor.heartbeatInterval", "3600s")
       .getOrCreate()
 
     import spark.implicits._
