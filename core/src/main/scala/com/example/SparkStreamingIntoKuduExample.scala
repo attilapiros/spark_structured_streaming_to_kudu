@@ -95,12 +95,14 @@ object SparkStreamingIntoKuduExample {
       .option("host", host)
       .option("port", port)
       .load()
+    
+    // Create a static dataframe for the join
     val staticData = Seq(("one", 1), ("two", 2)).toDF("value", "count")
 
     // Split the lines into words
     val words = lines.as[String].flatMap(_.split(" "))
 
-    // Start running the query that prints the running counts to the console
+    // Start running the query that writes to a Kudu table
     val query = words.join(staticData, Seq("value"), "left_outer")
       .writeStream
       .foreach(new KuduForeachWriter(kuduMaster, tableName))
